@@ -22,7 +22,7 @@ dependencies {
     implementation("io.quarkus:quarkus-amazon-lambda")
     implementation("io.quarkus:quarkus-arc")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
