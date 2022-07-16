@@ -1,0 +1,37 @@
+service: serverless-quarkus-example
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: provided
+  profile: serverless
+  stage: dev
+  region: eu-west-2
+  timeout: 15
+  memorySize: 256
+
+package:
+  individually: true
+
+functions:
+  hello:
+    package:
+      artifact: build/function.zip
+    handler: com.alexandrusurdulescu.lambda.HelloLambda
+    environment:
+      QUARKUS_LAMBDA_HANDLER: hello
+    events:
+      - httpApi:
+          path: /hello
+          method: post
+  goodbye:
+    package:
+      artifact: build/function.zip
+    handler: com.alexandrusurdulescu.lambda.GoodbyeLambda
+    environment:
+      QUARKUS_LAMBDA_HANDLER: goodbye
+    events:
+      - httpApi:
+          path: /goodbye
+          method: post

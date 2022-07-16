@@ -1,0 +1,15 @@
+POST {{url}}/hello
+Content-Type: application/json
+
+{
+  "name": "Alex"
+}
+
+
+###
+POST {{url}}/goodbye
+Content-Type: application/json
+
+{
+  "name": "Alex"
+}
