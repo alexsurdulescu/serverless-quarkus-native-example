@@ -10,4 +10,4 @@ pluginManagement {
         id(quarkusPluginId) version quarkusPluginVersion
     }
 }
-rootProject.name="serverless"
+rootProject.name="serverless-quarkus-example"
